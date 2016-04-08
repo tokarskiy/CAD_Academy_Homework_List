@@ -16,7 +16,7 @@ public:
 	}
 
 	///<summary>
-	///		Добавить элемент в конец списка
+	///	Р”РѕР±Р°РІРёС‚СЊ СЌР»РµРјРµРЅС‚ РІ РєРѕРЅРµС† СЃРїРёСЃРєР°
 	///</summary>
 	void PushBack(T element) {
 		if (_size == 0) {
@@ -35,7 +35,7 @@ public:
 	}
 
 	///<summary>
- 	///		Добавить элемент в начало списка
+ 	///	Р”РѕР±Р°РІРёС‚СЊ СЌР»РµРјРµРЅС‚ РІ РЅР°С‡Р°Р»Рѕ СЃРїРёСЃРєР°
 	///</summary>
 	void PushFront(T element) {
 		if (_size == 0) {
@@ -53,7 +53,7 @@ public:
 	}
 
 	///<summary>
-	/// 	Удалить элемент из конца списка
+	/// 	РЈРґР°Р»РёС‚СЊ СЌР»РµРјРµРЅС‚ РёР· РєРѕРЅС†Р° СЃРїРёСЃРєР°
 	///</summary>
 	void PopBack() {
 		Node<T>* newTail = _tail->GetPrev();
@@ -72,7 +72,7 @@ public:
 	}
 
 	///<summary>
-	///		Удалить элемент из начала списка
+	///	РЈРґР°Р»РёС‚СЊ СЌР»РµРјРµРЅС‚ РёР· РЅР°С‡Р°Р»Р° СЃРїРёСЃРєР°
 	///</summary>
 	void PopFront() {
 		Node<T>* newHead = _head->GetNext();
@@ -91,21 +91,21 @@ public:
 	}
 
 	///<summary>
-	///		Перейти к следующему элементу
+	///	РџРµСЂРµР№С‚Рё Рє СЃР»РµРґСѓСЋС‰РµРјСѓ СЌР»РµРјРµРЅС‚Сѓ
 	///</summary>
 	void IncCurrent() {
 		_current = _current->GetNext();
 	}
 
 	///<summary>
-	///		Перейти к предыдущему элементу
+	///	РџРµСЂРµР№С‚Рё Рє РїСЂРµРґС‹РґСѓС‰РµРјСѓ СЌР»РµРјРµРЅС‚Сѓ
 	///</summary>
 	void DecCurrent() {
 		_current = _current->GetPrev();
 	}
 
 	///<summary>
-	///		Проверить, является ли текущий элемент NULL
+	///	РџСЂРѕРІРµСЂРёС‚СЊ, СЏРІР»СЏРµС‚СЃСЏ Р»Рё С‚РµРєСѓС‰РёР№ СЌР»РµРјРµРЅС‚ NULL
 	///</summary>
 	bool IsCurrentNull() {
 		if (_current == nullptr) {
@@ -115,8 +115,8 @@ public:
 		return false;
 	}
 
-	///</summary>
-	///		Установить индекс текущего элемента
+	///<summary>
+	///	РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РёРЅРґРµРєСЃ С‚РµРєСѓС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р°
 	///</summary>
 	bool SetCurrentIndex(size_t index) {
 		if (index >= _size) {
@@ -130,34 +130,35 @@ public:
 	}
 
 	///<summary>
-	///		К началу
+	///	Рљ РЅР°С‡Р°Р»Сѓ
 	///</summary>
 	bool GoToStart() {
 		return this->SetCurrentIndex(0);
 	}
 
 	///<summary>
-	///		К концу
+	///	Рљ РєРѕРЅС†Сѓ
 	///</summary>
 	bool GoToEnd() {
 		return this->SetCurrentIndex(_size - 1);
 	}
 
 	///<summary>
-	///		Возвратить текущий элемент
+	///	Р’РѕР·РІСЂР°С‚РёС‚СЊ С‚РµРєСѓС‰РёР№ СЌР»РµРјРµРЅС‚
 	///</summary>
 	T Current() {
 		return _current->Element;
 	}
 
 	///<summary>
-	///		Размер
+	///	Р Р°Р·РјРµСЂ
 	///</summary>
 	size_t Size() {
 		return _size;
 	}
+	
 	///<summary>
-	///		Проверить, является ли список пустым
+	///	РџСЂРѕРІРµСЂРёС‚СЊ, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃРїРёСЃРѕРє РїСѓСЃС‚С‹Рј
 	///</summary>
 	bool Empty() {
 		return _size == 0;
